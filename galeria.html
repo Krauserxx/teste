@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANEC</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="shortcut icon" href="imgs/icon2.png" type="image/x-icon">
+    <link rel="stylesheet" href="style-galeria.css">
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <button class="bt_ico" onclick="toggleSidebar()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                 </svg>
+            </button>
+            <div id="logot">
+                <a href="index.html"><img src="imgs/logo.png" alt=""></a>
+                <a href="index.html">
+                    <h1 >sanec</h1>
+                </a>
+            </div>
+            <ul id="barralateral">
+                <li>
+                    <button class="bt_ico" onclick="closeSidebar()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
+                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </button>
+                </li>
+                <li><button><a href="index.html">Inicio</a></button></li>
+                <li><button><a href="python.html">Python</a></button></li>
+                <li><button><a href="aulas.html">Aulas</a></button></li>
+                <li><button><a href="depoimentos.html">Depoimentos</a></button></li>
+                <li><button><a href="projetos.html">Projetos</a></button></li>
+                <li><button><a href="galeria.html">Galeria</a></button></li>
+            </ul>
+        </nav> 
+    </header>
+    <main>
+        <div class="galeria">
+            <div class="text">
+                <h1>1° PI</h1>
+            </div>
+            <div id="box">
+                <div class="img">
+                </div>
+            </div>
+            <div id="box2">
+                <div class="img2">
+                </div>
+            </div>
+        </div>
+        <div class="galeria">
+            <div id="box3">
+                <div class="text">
+                    <h1>1° PI</h1>
+                </div>
+            </div>
+                <div id="box4">
+                    <div class="img3">
+                    </div>
+                </div>
+            <div id="box5">
+                <div class="img4">
+                </div>
+            </div>
+            
+        </div>
+        <div class="galeria2">
+            <div class="text">
+                <h1>2° PI</h1>
+            </div>
+            <div id="sbox">
+                <div class="simg">
+                </div>
+            </div>
+            <div id="sbox2">
+                <div class="simg2">
+                </div>
+            </div>
+            <div id="sbox3">
+                <div class="text">
+                    <h1>2° PI</h1>
+                </div>
+            </div>
+        </div>
+        <div class="galeria2">
+            <div id="sbox4">
+                <div class="simg3">
+                </div>
+            </div>
+            <div id="sbox5">
+                <div class="simg4">
+                </div>
+            </div>
+        </div>
+        <div class="galeria3">
+            <div class="text">
+                <h1>FETI</h1>
+            </div>
+            <div id="tbox">
+                <div class="timg">
+                </div>
+            </div>
+            <div id="tbox2">
+                <div class="timg2">
+                </div>
+            </div>
+        </div>
+        <div class="galeria3">
+            <div id="tbox3">
+                <div class="text">
+                    <h1>FETI</h1>
+                </div>
+            </div>
+                <div id="tbox4">
+                    <div class="timg3">
+                    </div>
+                </div>
+            <div id="tbox5">
+                <div class="timg4">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <img src="imgs/logo.png" alt="">
+        <h1>sanec</h1>
+        <ul>
+            <li>
+                <img src="imgs/iconisnta.png" alt="">
+                <a href="#">INSTAGRAM</a>
+            </li>
+            <li>
+                <img src="imgs/iconemail.jpg" alt="">
+                <a href="#">EMAIL</a>
+            </li>
+        </ul>
+    </footer>
+</body>
+<script>
+    window.sr = ScrollReveal({reset: true});
+    sr.reveal('.galeria', {duration: 2000});
+    sr.reveal('.galeria2', {duration: 2000});
+    sr.reveal('.galeria3', {duration: 2000});
+
+
+    var header = document.getElementById('header');
+    var navigationheader = document.getElementById('barralateral');
+    var content = document.getElementById(content);
+    var showsidbar = false;
+
+    function toggleSidebar() {
+        showsidbar = !showsidbar;
+
+        if(showsidbar) {
+            navigationheader.style.marginLeft = '-10vw';
+            navigationheader.style.animationName = 'animacao'
+            content.style.filter = 'blur(2px)';
+        }
+        else {
+            navigationheader.style.marginLeft = '-100vw';
+            navigationheader.style.animationName = ''
+        }
+    }
+
+    function closeSidebar() {
+        if(showsidbar) {
+            toggleSidebar();
+            navigationheader.style.animationName = 'animacao2'
+        }
+    }
+</script>
+</html>

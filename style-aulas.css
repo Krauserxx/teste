@@ -1,0 +1,229 @@
+@keyframes scale-up-hor-center{0%{transform:scaleX(.4)}100%{transform:scaleX(1)}}
+
+@keyframes scale-in-center{0%{transform:scale(0);opacity:1}100%{transform:scale(1);opacity:1}}
+
+@keyframes tracking-in-contract{0%{letter-spacing:1em;opacity:0}40%{opacity:.6}100%{letter-spacing:normal;opacity:1}}
+
+@keyframes fade-in{0%{opacity:0}100%{opacity:1}}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Mono:ital@1&display=swap');
+
+@font-face {
+    font-family: "Nd";
+    src: url("fonts/ND\ LOGOS\ REGULAR.ttf") format("opentype"), url("fonts/ND\ LOGOS\ REGULAR.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.24);
+    display: flex;
+    height: 90px;
+    width: 100%;
+}
+
+#logot {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#logot img {
+    display: inline-block;
+    height: 70px;
+    width: 91px;
+}
+
+#logot h1 {
+    font-weight: bold;
+    color: black;
+    display: inline-block;
+    font-family: 'ND';
+    font-size: 18px;
+}
+
+nav {
+    z-index: 1;
+    margin: 0 10%;
+    justify-content: space-between;
+    height: 90px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.205);
+    width: 100%;
+}
+
+nav ul {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-right: 30px;
+    font-size: 20px;
+}
+
+nav ul li {
+    display: flex;
+    flex-direction: row;
+    margin-right: 30px;
+    list-style: none;
+}
+
+nav ul li button{
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 600ms;
+    transition-property: color;
+}
+
+
+nav ul li button a {
+    font-weight: bold;
+    font-size: 19px;
+    color: black;
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+nav ul li button:focus,
+nav ul li button:hover {
+    color: black;
+}
+
+nav ul li button:focus:after,
+nav ul li button:hover:after {
+    width: 78%;
+    left: 11%;
+}
+
+nav ul li button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 600ms;
+    transition-property: width, left;
+}
+
+.bt_ico {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .bt_ico {
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.24);
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        margin-left: -100vw;
+        background-color: white;
+        height: 100%;
+        width: 250px;
+        animation-duration: 1s;
+    }
+
+    nav ul li {
+        align-items: center;
+        margin-top: 50px;
+    }
+
+}
+
+@keyframes animacao {
+    from {margin-left: -100vw;}
+    top {margin-left: -10vw;}
+}
+
+@keyframes animacao2 {
+    from {margin-left: -10vw;}
+    top {margin-left: -100vw;}
+}
+
+.scale-in-center {
+    animation:scale-in-center .8s cubic-bezier(.25,.46,.45,.94) both
+}
+
+.tracking-in-contract{
+    animation:tracking-in-contract 1s cubic-bezier(.215,.61,.355,1.000) both
+}
+
+main {
+    display: block;
+    height: 800px;
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    background-color:black;
+    height: 150px;
+    font-size: 19px;
+}
+
+footer img {
+    display: inline-block;
+    height: 70px;
+    width: 91px;
+}
+
+footer ul {
+    margin-left: 30px;
+    display: inline-block;
+    width: 200px;
+}
+
+footer ul li {
+    align-items: center;
+    margin: 10px;
+}
+
+footer ul li img {
+    width: 8%;
+    height: 8%;
+}
+
+footer ul li a {
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: aqua;
+}
+
+footer h1 {
+    font-size: 18px;
+    color: white;
+    font-family: 'ND';
+}

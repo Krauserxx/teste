@@ -1,0 +1,501 @@
+
+@keyframes scale-up-hor-center{0%{transform:scaleX(.4)}100%{transform:scaleX(1)}}
+
+@keyframes scale-in-center{0%{transform:scale(0);opacity:1}100%{transform:scale(1);opacity:1}}
+
+@keyframes tracking-in-contract{0%{letter-spacing:1em;opacity:0}40%{opacity:.6}100%{letter-spacing:normal;opacity:1}}
+
+@keyframes fade-in{0%{opacity:0}100%{opacity:1}}
+
+@keyframes scale-in-hor-center{0%{transform:scaleX(0);opacity:1}100%{transform:scaleX(1);opacity:1}}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Mono:ital@1&display=swap');
+
+@font-face {
+    font-family: "Nd";
+    src: url("fonts/ND\ LOGOS\ REGULAR.ttf") format("opentype"), url("fonts/ND\ LOGOS\ REGULAR.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0px;
+}
+
+#parallax {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    width: 100%;
+    background-image: url(imgs/parralax4.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#parallax h1 {
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    font-family: 'ND';
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Nd";
+    src: url("fonts/ND\ LOGOS\ REGULAR.ttf") format("opentype"), url("fonts/ND\ LOGOS\ REGULAR.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+header {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.24);
+    display: flex;
+    height: 90px;
+    width: 100%;
+   
+}
+
+#logot {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#logot img {
+    display: inline-block;
+    height: 61px;
+   
+
+}
+
+#logot h1 {
+    font-weight: bold;
+    color: black;
+    display: inline-block;
+    font-family: 'ND';
+    font-size: 18px;
+}
+
+nav {
+    z-index: 1;
+    margin: 0 10%;
+    justify-content: space-between;
+    height: 90px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.205);
+    width: 100%;
+    
+}
+
+nav ul {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-right: 97px;
+    font-size: 20px;
+}
+
+nav ul li {
+    display: flex;
+    flex-direction: row;
+    margin-right: 30px;
+    list-style: none;
+}
+
+nav ul li button{
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 600ms;
+    transition-property: color;
+}
+
+
+nav ul li button a {
+    font-weight: bold;
+    font-size: 19px;
+    color: black;
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+
+nav ul li button:focus,
+nav ul li button:hover {
+    color: black;
+}
+
+nav ul li button:focus:after,
+nav ul li button:hover:after {
+    width: 78%;
+    left: 11%;
+}
+
+nav ul li button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 600ms;
+    transition-property: width, left;
+}
+
+.bt_ico {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.scale-in-hor-center {
+    animation:scale-in-hor-center 0.7s cubic-bezier(.25,.46,.45,.94) both
+}
+
+@media screen and (max-width: 1024px) {
+    .bt_ico {
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.24);
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        margin-left: -100vw;
+        background-color: white;
+        height: 100%;
+        width: 250px;
+        animation-duration: 1s;
+    }
+
+    nav ul li {
+        align-items: center;
+        margin-top: 50px;
+    }
+
+}
+
+@keyframes animacao {
+    from {margin-left: -100vw;}
+    top {margin-left: -10vw;}
+}
+
+@keyframes animacao2 {
+    from {margin-left: -10vw;}
+    top {margin-left: -100vw;}
+}
+.scale-in-center {
+    animation:scale-in-center .8s cubic-bezier(.25,.46,.45,.94) both
+}
+
+.tracking-in-contract{
+    animation:tracking-in-contract 1s cubic-bezier(.215,.61,.355,1.000) both
+}
+
+main {
+    display: block;
+    width: 100%;
+}
+
+main div#conteudo {
+    margin-top: 1px;
+    display: flex;
+    justify-content: left;
+    height: 900px;
+    background-image: url(imgs/ttttt.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+main div#conteudo div#boxtxt {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 150px;
+    margin-left: 55px;
+    margin-right: 55px;
+    background-color: white;
+    height: 430px;
+    width: 600px;
+    color: black;
+    transition-duration: 700ms;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.253);
+}
+
+main div#conteudo div#boxtxt h1 {
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Oswald', sans-serif;
+}
+
+main div#conteudo div#boxtxt p {
+    margin-bottom: 20px;
+    display: block;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    text-align: center;
+}
+
+main div#conteudo div#boxtxt a {
+    margin-top: 28px;
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+}
+
+main div#conteudo div#boxtxt a button {
+    display: block;
+    margin-top: 28px;
+    margin: auto;
+    appearance: none;
+    background-color: transparent;
+    border: 0.125em solid #1A1A1A;
+    border-radius: 0.9375em;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    min-height: 3.75em;
+    min-width: 0;
+    outline: none;
+    padding: 1em 2.3em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+}
+
+main div#conteudo div#boxtxt a button:disabled {
+    pointer-events: none;
+}
+   
+main div#conteudo div#boxtxt a button:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+   
+main div#conteudo div#boxtxt a button:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+.fade-in {
+    animation:fade-in 2s cubic-bezier(.39,.575,.565,1.000) both
+}
+
+
+div#sobre {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+}
+
+div#sobre h1 {
+    margin-top: 200px;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'ND';
+}
+
+div#sobre p {
+    margin-top: 40px;
+    width: 50%;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Roboto Mono', monospace;
+    margin-bottom: 200px;
+}
+
+@media screen and (max-width: 1024px) {
+    div#sobre p {
+        display: block;
+        width: 95%;
+    }
+}
+
+
+.conhecimentos {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    height: 700px;
+}
+
+@media  screen and (max-width: 924px) {
+
+    #nossos h1 {
+        margin-top: 35px;
+        font-size: 18px;
+    }
+
+    .conhecimentos {
+        margin: 70px 5%;
+        width: 90%;
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        height: 1700px;
+        border-radius: 5px;
+    }
+}
+
+div#nossos{
+    border-top: 1px solid black;
+    color: black;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'ND';
+    font-size: 15px;
+}
+
+#nossos h1 {
+    margin-top: 100px;
+}
+
+
+.texto {
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 13px;
+}
+
+.texto p {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 17px;
+    margin: 15px 5%;
+}
+
+#box {
+    margin-top: 70px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.24);
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    width: 380px;
+    background-color: white;
+    margin-left: 15px;
+}
+
+.boximg {
+    border-radius: 10px 10px 0px 0px;
+    background-image: url(imgs/montagem.png);
+    background-size: cover;
+    height: 260px;
+    width: 100%;
+    background-repeat: no-repeat;
+    display: block;
+}
+.boximg2 {
+    border-radius: 10px 10px 0px 0px;
+    background-image: url(imgs/redes.png);
+    background-size: cover;
+    height: 260px;
+    width: 100%;
+    background-repeat: no-repeat;
+    display: block;
+}
+.boximg3 {
+    border-radius: 10px 10px 0px 0px;
+    background-image: url(imgs/programação.png);
+    background-size: cover;
+    height: 260px;
+    width: 100%;
+    background-repeat: no-repeat;
+    display: block;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    background-color:black;
+    height: 150px;
+    font-size: 19px;
+}
+
+footer img {
+    display: inline-block;
+    height: 70px;
+    width: 91px;
+}
+
+footer ul {
+    margin-left: 30px;
+    display: inline-block;
+    width: 200px;
+}
+
+footer ul li {
+    align-items: center;
+    margin: 10px;
+}
+
+footer ul li img {
+    width: 8%;
+    height: 8%;
+}
+
+footer ul li a {
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: aqua;
+}
+
+footer h1 {
+    font-size: 18px;
+    color: white;
+    font-family: 'ND';
+}
+
+#sobre, #parallax, #nossos, .conhecimentos, #box{
+    visibility: hidden;
+}

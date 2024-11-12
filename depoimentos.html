@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Professores</title>
+    <link rel="stylesheet" href="C:\Users\Pichau\OneDrive\Documentos\Html.escola\style-depoimentos.css">
+</head>
+<body>
+    <h1>Registro de Professores</h1>
+    <button onclick="mostrarFormulario()">Adicionar Professor</button>
+
+    <div id="form-container" style="display: none;">
+        <h2>Adicionar Professor</h2>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+        <label for="disciplina">Disciplina:</label>
+        <input type="text" id="disciplina" required>
+        <label for="faltas">Faltas:</label>
+        <input type="number" id="faltas" required>
+        <label for="ferias">Férias:</label>
+        <input type="text" id="ferias" required>
+        <label for="substituto">Substituto:</label>
+        <input type="text" id="substituto" required>
+        <button onclick="adicionarProfessor()">Adicionar</button>
+        <button onclick="esconderFormulario()">Cancelar</button>
+    </div>
+
+    <table id="professores-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Disciplina</th>
+                <th>Faltas</th>
+                <th>Férias</th>
+                <th>Substituto</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>João Silva</td>
+                <td>Matemática</td>
+                <td>2</td>
+                <td>Julho</td>
+                <td>Maria Souza</td>
+                <td>
+                    <button onclick="editarRegistro(this)">Editar</button>
+                    <button onclick="excluirRegistro(this)">Excluir</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Ana Costa</td>
+                <td>História</td>
+                <td>0</td>
+                <td>Agosto</td>
+                <td>Lucas Mendes</td>
+                <td>
+                    <button onclick="editarRegistro(this)">Editar</button>
+                    <button onclick="excluirRegistro(this)">Excluir</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function mostrarFormulario() {
+            document.getElementById("form-container").style.display = "block";
+        }
+
+        function esconderFormulario() {
+            document.getElementById("form-container").style.display = "none";
+        }
+
+        function adicionarProfessor() {
+            const nome = document.getElementById("nome").value;
+            const disciplina = document.getElementById("disciplina").value;
+            const faltas = document.getElementById("faltas").value;
+            const ferias = document.getElementById("ferias").value;
+            const substituto = document.getElementById("substituto").value;
+
+            const table = document.getElementById("professores-table").getElementsByTagName('tbody')[0];
+            const newRow = table.insertRow();
+
+            const newCell1 = newRow.insertCell(0);
+            const newCell2 = newRow.insertCell(1);
+            const newCell3 = newRow.insertCell(2);
+            const newCell4 = newRow.insertCell(3);
+            const newCell5 = newRow.insertCell(4);
+            const newCell6 = newRow.insertCell(5);
+            const newCell7 = newRow.insertCell(6);
+
+            newCell1.innerText = table.rows.length; // ID baseado no número de linhas
+            newCell2.innerText = nome;
+            newCell3.innerText = disciplina;
+            newCell4.innerText = faltas;
+            newCell5.innerText = ferias;
+            newCell6.innerText = substituto;
+            newCell7.innerHTML = `<button onclick="editarRegistro(this)">Editar</button>
+                                 <button onclick="excluirRegistro(this)">Excluir</button>`;
+
+            // Limpa o formulário
+            document.getElementById("nome").value = '';
+            document.getElementById("disciplina").value = '';
+            document.getElementById("faltas").value = '';
+            document.getElementById("ferias").value = '';
+            document.getElementById("substituto").value = '';
+
+            esconderFormulario();
+        }
+
+        function editarRegistro(button) {
+            const row = button.parentElement.parentElement;
+            const nome = row.cells[1].innerText;
+            const disciplina = row.cells[2].innerText;
+
+            const novoNome = prompt("Editar Nome:", nome);
+            const novaDisciplina = prompt("Editar Disciplina:", disciplina);
+
+            if (novoNome !== null) row.cells[1].innerText = novoNome;
+            if (novaDisciplina !== null) row.cells[2].innerText = novaDisciplina;
+        }
+
+        function excluirRegistro(button) {
+            const row = button.parentElement.parentElement;
+            const confirmar = confirm("Tem certeza que deseja excluir este registro?");
+            if (confirmar) {
+                row.remove();
+            }
+        }
+    </script>
+</body>
+</html>

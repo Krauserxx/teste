@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="shortcut icon" href="imgs/icon2.png" type="image/x-icon">
+    <link rel="stylesheet" href="style-menu.css">
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <button class="bt_ico" onclick="toggleSidebar()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                 </svg>
+            </button>
+            <div id="logot">
+                <a href="index.html"><img src="imgs/escola.png" alt=""></a>
+                
+                    
+                </a>
+            </div>
+            <ul id="barralateral">
+                <li>
+                    <button class="bt_ico" onclick="closeSidebar()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
+                            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </button>
+                </li>
+                <li><button><a href="index.html">INICIO</a></button></li>
+                <li><button><a href="python.html">DADOS</a></button></li>
+               
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="conteudo">
+            <div id="boxtxt" class="fade-in">
+                <h1>IR PARA O REGISTRO DE FALTAS</h1>
+                <p>Aqui você será trasfirido para o registro de faltas. <br>
+                </p>
+                <a href="python.html"><button>Clique aqui</button></a>
+            </div>
+        </div>
+       
+</body>
+<script>
+    window.sr = ScrollReveal({reset: true});
+    sr.reveal('#sobre', {duration: 2000});
+    sr.reveal('#parallax', {duration: 2000});
+    sr.reveal('#parallax h1', {duration: 3000,
+    rotate: {x:0, y: 80, z:0}});
+    sr.reveal('#nossos', {duration: 2000});
+    sr.reveal('.conhecimentos', {duration: 2000});
+    sr.reveal('#box', {duration: 2500,
+    rotate: {x:0, y: 80, z:0}});
+    
+
+    var header = document.getElementById('header');
+    var navigationheader = document.getElementById('barralateral');
+    var content = document.getElementById(content);
+    var showsidbar = false;
+
+    function toggleSidebar() {
+        showsidbar = !showsidbar;
+
+        if(showsidbar) {
+            navigationheader.style.marginLeft = '-10vw';
+            navigationheader.style.animationName = 'animacao'
+            content.style.filter = 'blur(2px)';
+        }
+        else {
+            navigationheader.style.marginLeft = '-100vw';
+            navigationheader.style.animationName = ''
+        }
+    }
+
+    function closeSidebar() {
+        if(showsidbar) {
+            toggleSidebar();
+            navigationheader.style.animationName = 'animacao2'
+        }
+    }
+</script>
+</html>
